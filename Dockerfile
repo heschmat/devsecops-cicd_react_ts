@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM nginx:1.25.4-alpine3.19 AS production
+FROM nginx:1.25.4-alpine AS production
 RUN apk update && apk upgrade --no-cache
 
 # Copy build artifacts to nginx
